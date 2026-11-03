@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#201928">
+  <meta name="description" content="리포와 맨다몬의 인공수정 이야기. 난자를 지켜 새로운 시작을 완성하는 5분 서바이벌 게임.">
+  <title>난자 서바이버즈 | 리포짱의 난자 방어 작전</title>
+  <link rel="stylesheet" href="style.css?v=17">
+</head>
+<body>
+  <canvas id="game" aria-label="난자 방어 게임 화면"></canvas>
+  <header class="site-header">
+    <a class="brand-mark" href="./" aria-label="난자 서바이버즈 홈"><span class="brand-orb">◎</span><span>RIPO LAB<small>FERTILITY CHRONICLES</small></span></a>
+    <div class="header-actions"><button id="pause" aria-label="게임 일시정지">일시정지 <b>Ⅱ</b></button></div>
+  </header>
+  <div id="hud" hidden>
+    <div class="hud-caption"><span>◎ 난자 보호 모니터</span><span>정상 수정까지</span></div>
+    <div class="stats"><span id="time">05:00</span><span id="level">Lv.1</span><span id="kills" hidden>0 처치</span><span id="slots">1/8종</span></div>
+    <div class="meter-label"><span>난자 보호력</span><span id="hpLabel">100%</span></div>
+    <div class="bar" aria-label="난자 보호력"><i id="hp"></i></div>
+    <div class="meter-label xp-label"><span>세포 성장</span><span id="xpLabel">0%</span></div>
+    <div class="xp" aria-label="세포 성장 경험치"><i id="xp"></i></div>
+    <details id="loadout"><summary>보유 방어 스킬</summary><div id="weapons"></div></details>
+    <p id="wave"></p>
+  </div>
+  <main id="home" class="screen">
+    <div class="hero-decoration" aria-hidden="true"><i></i><i></i><i></i></div>
+    <section class="intro">
+      <div class="eyebrow hero-kicker"><span class="pulse-dot"></span>RIPO &amp; MANDAMON · FERTILITY LAB</div>
+      <div class="operation-label">OPERATION 05:00 <span>난자 보호 작전</span></div>
+      <h1>난자<br><em>서바이버즈</em><span>리포짱의 자궁을 지키는 5분.</span></h1>
+      <p class="story">인공수정 실험 중 <strong>정액 샘플이 뒤바뀌었다!</strong><br>온조롱이의 정자들이 난자에 접근하는 상황.<br>남표니의 정자가 도착할 때까지 수정 방어선을 지켜라.</p>
+      <div class="journey" aria-label="이야기 단계">
+        <div class="journey-label">STORY PATH <span>수정에서 임신과 출산까지</span></div>
+        <div class="journey-steps"><span class="current">01 <b>인공수정</b></span><span>02 <b>난자 방어</b></span><span>03 <b>수정 성공</b></span><span>04 <b>임신·출산</b></span></div>
+      </div>
+      <div class="tags"><span>⌛ 5분 방어</span><span>◉ 정자 보스 5단계</span><span>✦ 시작 무기 랜덤 · 최대 8종</span></div>
+      <button class="primary" id="start">프롤로그 보기 · 실험 시작 <b>↗</b></button>
+      <p class="controls">WASD / 방향키 이동 · 모바일 드래그<br>P / ESC 일시정지 · 소리와 스킬 도감은 일시정지 메뉴</p>
+      <small>리포와 맨다몬이 어흐하는 이야기입니다</small>
+    </section>
+    <div class="portrait duo-portrait">
+      <img src="assets/adult-main.png" alt="리포와 맨다몬이 실험실에 함께 있는 삽화">
+      <div class="portrait-badge" aria-hidden="true">♡<span>NEW LIFE<br>PROJECT</span></div>
+      <span class="portrait-label">FERTILITY CHRONICLES / 01<br><b>작은 난자에서 시작되는 큰 이야기.</b></span>
+    </div>
+    <div class="bottom-note">RIPO LAB · THE BEGINNING OF A NEW STORY <span>FERTILIZATION → PREGNANCY → BIRTH</span></div>
+  </main>
+  <section id="modal" class="veil" hidden><div class="panel"><div id="modalBody"></div></div></section>
+  <div id="joystick" hidden><i></i></div><div id="toast"></div>
+  <script src="difficulty.js?v=17"></script>
+  <script src="skills.js?v=17"></script>
+  <script src="combat.js?v=17"></script>
+  <script src="visuals.js?v=17"></script>
+  <script src="game.js?v=18"></script>
+</body>
+</html>
